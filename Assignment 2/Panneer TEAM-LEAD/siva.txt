@@ -1,0 +1,162 @@
+sivaganesh.p
+720919104034
+cse - A 
+Assignment - 2
+
+import requests
+
+from decouple import config
+
+NEWS_API_KEY = config('NEWS_API_KEY')
+
+COUNTRY = 'in'
+def get_latest_news():
+    news_data = requests.get(f'https://newsapi.org/v2/top-headlines?country={COUNTRY}&apiKey={NEWS_API_KEY}').json()
+    return news_data['articles']
+
+" We are converting the response into JSON. It will look something like this"
+
+{
+  "status": "ok",
+  "totalResults": 38,
+  "articles": [
+    {
+      "source": {
+        "id": null,
+        "name": "Sportskeeda"
+      },
+      "author": "Aniket Thakkar",
+      "title": "Latest Free Fire redeem code to get Weapon loot crate today (14 October 2021) - Sportskeeda",
+      "description": "Gun crates are one of the ways that players in Free Fire can obtain impressive and appealing gun skins.",
+      "url": "https://www.sportskeeda.com/free-fire/latest-free-fire-redeem-code-get-weapon-loot-crate-today-14-october-2021",
+      "urlToImage": "https://staticg.sportskeeda.com/editor/2021/10/d0b83-16341799119781-1920.jpg",
+      "publishedAt": "2021-10-14T03:51:50Z",
+      "content": null
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "NDTV News"
+      },
+      "author": null,
+      "title": "BSF Gets Increased Powers In 3 Border States: What It Means - NDTV",
+      "description": "Border Security Force (BSF) officers will now have the power toarrest, search, and of seizure to the extent of 50 km inside three newstates sharing international boundaries with Pakistan and Bangladesh.",
+      "url": "https://www.ndtv.com/india-news/bsf-gets-increased-powers-in-3-border-states-what-it-means-2574644",
+      "urlToImage": "https://c.ndtvimg.com/2021-08/eglno7qk_-bsf-recruitment-2021_625x300_10_August_21.jpg",
+      "publishedAt": "2021-10-14T03:44:00Z",
+      "content": "This move is quickly snowballing into a debate on state autonomy. New Delhi: Border Security Force (BSF) officers will now have the power to arrest, search, and of seizure to the extent of 50 km ins… [+4143 chars]"
+    },
+    {
+      "source": {
+        "id": "the-times-of-india",
+        "name": "The Times of India"
+      },
+      "author": "TIMESOFINDIA.COM",
+      "title": "5 health conditions that can make your joints hurt - Times of India",
+      "description": "Joint pain caused by these everyday issues generally goes away on its own when you stretch yourself a little and flex your muscles.",
+      "url": "https://timesofindia.indiatimes.com/life-style/health-fitness/health-news/5-health-conditions-that-can-make-your-joints-hurt/photostory/86994969.cms",
+      "urlToImage": "https://static.toiimg.com/photo/86995017.cms",
+      "publishedAt": "2021-10-14T03:30:00Z",
+      "content": "Depression is a mental health condition, but the symptoms may manifest even on your physical health. Unexpected aches and pain in the joints that you may experience when suffering from chronic depres… [+373 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "The Indian Express"
+      },
+      "author": "Devendra Pandey",
+      "title": "Rahul Dravid likely to be interim coach for New Zealand series - The Indian Express",
+      "description": "It’s learnt that a few Australian coaches expressed interest in the job, but the BCCI isn’t keen as they are focussing on an Indian for the role, before they look elsewhere.",
+      "url": "https://indianexpress.com/article/sports/cricket/rahul-dravid-likely-to-be-interim-coach-for-new-zealand-series-7570990/",
+      "urlToImage": "https://images.indianexpress.com/2021/05/rahul-dravid.jpg",
+      "publishedAt": "2021-10-14T03:26:09Z",
+      "content": "Rahul Dravid is likely to be approached by the Indian cricket board to be the interim coach for Indias home series against New Zealand. Head coach Ravi Shastri and the core of the support staff will … [+1972 chars]"
+    },
+    {
+      "source": {
+        "id": null,
+        "name": "CNBCTV18"
+      },
+      "author": null,
+      "title": "Thursday's top brokerage calls: Infosys, Wipro and more - CNBCTV18",
+      "description": "Goldman Sachs has maintained its 'sell' rating on Mindtree largely due to expensive valuations, while UBS expects a muted reaction from Wipro's stock. Here are the top brokerage calls for the day:",
+      "url": "https://www.cnbctv18.com/market/stocks/thursdays-top-brokerage-calls-infosys-wipro-and-more-11101072.htm",
+      "urlToImage": "https://images.cnbctv18.com/wp-content/uploads/2019/03/buy-sell.jpg",
+      "publishedAt": "2021-10-14T03:26:03Z",
+      "content": "MiniGoldman Sachs has maintained its 'sell' rating on Mindtree largely due to expensive valuations, while UBS expects a muted reaction from Wipro's stock. Here are the top brokerage calls for the day:"
+    }
+  ]
+}
+
+"Designing News Page"
+
+We’re going to design the news page using Bootstrap only. So, create a news.html file inside the templates directory and add the following code there:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <title>Latest News Headlines</title>
+  </head>
+  <body>
+    <h1 class="text-center mt-4 mb-5">Latest News Headlines</h1>
+    <div class="row mt-5">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="row">
+          {% for news in news_articles %}
+          <div class="col-md-4 mb-5">
+            <div class="card" style="width: 18rem">
+              <img src="{{ news.urlToImage }}" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">{{ news.title }}</h5>
+                <p class="card-text">{{ news.description }}</p>
+                <a href="{{ news.url }}" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+"Creating Route for News page"
+
+Now, open the routes.py file and create a route "/news" for the news page.
+
+from core import app
+from flask import render_template
+from .utils import get_latest_news   # Add this line
+@app.route('/')
+def say_hello():
+    user = {"name": "Ashutosh"}
+    return render_template("index.html", user=user)
+# Add this part
+@app.route('/news')
+def news_headlines():
+    news_articles = get_latest_news()
+    return render_template("news.html", news_articles=news_articles)
+
+Now we are ready to run the server and see the output:
+
+
+
+Doesn’t that look amazing? We just created our first news application using Flask.
