@@ -1,0 +1,28 @@
+body {
+  margin: 10px;
+  font-family: Georgia, serif;
+  background-color: rebeccapurple !important;
+}
+
+img {
+  border-radius: 100%;
+  height: 250px;
+  width: 250px;
+  margin-left: 2px;
+  margin-top: 2px;
+  border-color: black;
+
+  box-shadow: 5px 5px 8px rgb(0, 0, 0);
+  margin: 10px;
+}
+
+h1{
+  color: red;
+}
+p{
+  color: brown;
+}
+
+.div2{
+  margin-top: 70px;
+}

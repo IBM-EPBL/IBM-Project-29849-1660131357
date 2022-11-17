@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+{% block head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1"> 
+<!--Bootstrap CSS-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="static/sheets/styles1.css">
+<!--Google Fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+{% endblock %}
+
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">News Tracker</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Profile</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="base.html">Fetch News</a>
+                </li> 
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="signin.html">Sign In</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="signup.html">Sign Up</a>
+                </li>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+     
+
+      <div class="container div2">
+        <div class="row">
+          <div class="col-sm-5">
+            <a href="home.html" alt="Make A Transaction">
+             <img src="static/Images/images.png" width="410" height="390">
+            </a>
+            </div>
+            <div class="col-sm-5">
+              <h1>Home page</h1>
+              <p>
+                <span>
+                  <ul class="content">
+                 <li class="content"><b>U can see what's in the home page using this link</b></li>
+                </ul>
+                 </span>
+              </p>
+              </div>
+            </div>
+           </div>
+
+
+
+           <div class="container div2">
+            <div class="row">
+              <div class="col-md-5">
+                <h1>About Page</h1>
+                  <p>
+                    <span>
+                      <ul class="content">
+                        <li class="content"><b>U can see what's in the about page using this link</b></li>
+                       </ul>
+                    </span>
+                  </p>
+                </div>
+                <div class="col-md-5">
+                  <a href="about.html" alt="Transaction History">
+                  <img src="static/Images/download.png" width="410" height="390">
+                </a>  
+                </div>
+                </div>
+               </div>
+
+               <div class="container div2">
+                <div class="row">
+                  <div class="col-sm-5">
+                    <a href="signup.html" alt="Make A Transaction">
+                     <img src="static/Images/sign up.svg" width="410" height="390">
+                    </a>
+                    </div>
+                    <div class="col-sm-5">
+                      <h1>Sign Up Page</h1>
+                      <p>
+                        <span>
+                          <ul class="content">
+                         <li class="content"><b>Create an account for yourself and enjoy the priviliges given to you</b></li>
+                        </ul>
+                         </span>
+                      </p>
+                      </div>
+                    </div>
+                   </div>
+        
+        
+        
+                   <div class="container div2">
+                    <div class="row">
+                      <div class="col-md-5">
+                        <h1>Sign In Page</h1>
+                          <p>
+                            <span>
+                              <ul class="content">
+                                <li class="content"><b>Log In to your existing account if you have one</b></li>
+                               </ul>
+                            </span>
+                          </p>
+                        </div>
+                        <div class="col-md-5">
+                          <a href="signin.html" alt="Transaction History">
+                          <img src="static/Images/sign in.svg" width="410" height="390">
+                        </a>  
+                        </div>
+                        </div>
+                       </div>
+           
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@stackblitz/sdk@1/bundles/sdk.umd.js"></script>
+      
+      <script src="/docs/5.2/assets/js/docs.min.js"></script>
+      
+      <script>
+        
+        document.querySelectorAll('.btn-edit').forEach(btn => {
+          btn.addEventListener('click', event => {
+            const htmlSnippet = event.target.closest('.bd-code-snippet').querySelector('.bd-example').innerHTML
+      
+            
+            const classes = Array.from(event.target.closest('.bd-code-snippet').querySelector('.bd-example').classList).join(' ')
+      
+            const jsSnippet = event.target.closest('.bd-code-snippet').querySelector('.btn-edit').getAttribute('data-sb-js-snippet')
+            StackBlitzSDK.openBootstrapSnippet(htmlSnippet, jsSnippet, classes)
+          })
+        })
+      
+        StackBlitzSDK.openBootstrapSnippet = (htmlSnippet, jsSnippet, classes) => {
+          const markup = `<!doctype html>
+      <html lang="en">
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link href="https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@5.2.1\/dist\/css\/bootstrap.min.css" rel="stylesheet">
+          <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+          <title>Bootstrap Example</title>
+          <${'script'} src="https:\/\/cdn\.jsdelivr\.net\/npm\/bootstrap@5\.2\.1\/dist\/js\/bootstrap\.bundle\.min\.js"></${'script'}>
+        </head>
+        <body class="p-3 m-0 border-0 ${classes}">
+      
+          <!-- Example Code -->
+      ${htmlSnippet.replace(/^/gm, '    ')}
+          <!-- End Example Code -->
+      
+        '</body>
+      </html>`
+      
+          const jsSnippetContent = jsSnippet ? '\/\/ NOTICE!!! Initially embedded in our docs this JavaScript\n\/\/ file contains elements that can help you create reproducible\n\/\/ use cases in StackBlitz for instance\.\n\/\/ In a real project please adapt this content to your needs\.\n\/\/ \u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\n\n\/\*!\n \* JavaScript for Bootstrap\u0027s docs \(https:\/\/getbootstrap\.com\/\)\n \* Copyright 2011\-2022 The Bootstrap Authors\n \* Copyright 2011\-2022 Twitter, Inc\.\n \* Licensed under the Creative Commons Attribution 3\.0 Unported License\.\n \* For details, see https:\/\/creativecommons\.org\/licenses\/by\/3\.0\/\.\n \*\/\n\n\/\* global bootstrap: false \*\/\n\n\(\(\) =\u003e \{\n  \u0027use strict\u0027\n\n  \/\/ \-\-\-\-\-\-\-\-\n  \/\/ Tooltips\n  \/\/ \-\-\-\-\-\-\-\-\n  \/\/ Instantiate all tooltips in a docs or StackBlitz page\n  document\.querySelectorAll\(\u0027\[data\-bs\-toggle=\u0022tooltip\u0022\]\u0027\)\n    \.forEach\(tooltip =\u003e \{\n      new bootstrap\.Tooltip\(tooltip\)\n    \}\)\n\n  \/\/ \-\-\-\-\-\-\-\-\n  \/\/ Popovers\n  \/\/ \-\-\-\-\-\-\-\-\n  \/\/ Instantiate all popovers in a docs or StackBlitz page\n  document\.querySelectorAll\(\u0027\[data\-bs\-toggle=\u0022popover\u0022\]\u0027\)\n    \.forEach\(popover =\u003e \{\n      new bootstrap\.Popover\(popover\)\n    \}\)\n\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Toasts\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Used by \u0027Placement\u0027 example in docs or StackBlitz\n  const toastPlacement = document\.getElementById\(\u0027toastPlacement\u0027\)\n  if \(toastPlacement\) \{\n    document\.getElementById\(\u0027selectToastPlacement\u0027\)\.addEventListener\(\u0027change\u0027, function \(\) \{\n      if \(!toastPlacement\.dataset\.originalClass\) \{\n        toastPlacement\.dataset\.originalClass = toastPlacement\.className\n      \}\n\n      toastPlacement\.className = `\$\{toastPlacement\.dataset\.originalClass\} \$\{this\.value\}`\n    \}\)\n  \}\n\n  \/\/ Instantiate all toasts in a docs page only\n  document\.querySelectorAll\(\u0027\.bd\-example \.toast\u0027\)\n    \.forEach\(toastNode =\u003e \{\n      const toast = new bootstrap\.Toast\(toastNode, \{\n        autohide: false\n      \}\)\n\n      toast\.show\(\)\n    \}\)\n\n  \/\/ Instantiate all toasts in a docs page only\n  const toastTrigger = document\.getElementById\(\u0027liveToastBtn\u0027\)\n  const toastLiveExample = document\.getElementById\(\u0027liveToast\u0027\)\n  if \(toastTrigger\) \{\n    toastTrigger\.addEventListener\(\u0027click\u0027, \(\) =\u003e \{\n      const toast = new bootstrap\.Toast\(toastLiveExample\)\n\n      toast\.show\(\)\n    \}\)\n  \}\n\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Alerts\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Used in \u0027Show live toast\u0027 example in docs or StackBlitz\n  const alertPlaceholder = document\.getElementById\(\u0027liveAlertPlaceholder\u0027\)\n  const alertTrigger = document\.getElementById\(\u0027liveAlertBtn\u0027\)\n\n  const appendAlert = \(message, type\) =\u003e \{\n    const wrapper = document\.createElement\(\u0027div\u0027\)\n    wrapper\.innerHTML = \[\n      `\u003cdiv class=\u0022alert alert\-\$\{type\} alert\-dismissible\u0022 role=\u0022alert\u0022\u003e`,\n      `   \u003cdiv\u003e\$\{message\}\u003c\/div\u003e`,\n      \u0027   \u003cbutton type=\u0022button\u0022 class=\u0022btn\-close\u0022 data\-bs\-dismiss=\u0022alert\u0022 aria\-label=\u0022Close\u0022\u003e\u003c\/button\u003e\u0027,\n      \u0027\u003c\/div\u003e\u0027\n    \]\.join\(\u0027\u0027\)\n\n    alertPlaceholder\.append\(wrapper\)\n  \}\n\n  if \(alertTrigger\) \{\n    alertTrigger\.addEventListener\(\u0027click\u0027, \(\) =\u003e \{\n      appendAlert\(\u0027Nice, you triggered this alert message!\u0027, \u0027success\u0027\)\n    \}\)\n  \}\n\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Checks \u0026 Radios\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Indeterminate checkbox example in docs and StackBlitz\n  document\.querySelectorAll\(\u0027\.bd\-example\-indeterminate \[type=\u0022checkbox\u0022\]\u0027\)\n    \.forEach\(checkbox =\u003e \{\n      if \(checkbox\.id\.includes\(\u0027Indeterminate\u0027\)\) \{\n        checkbox\.indeterminate = true\n      \}\n    \}\)\n\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Links\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Disable empty links in docs examples only\n  document\.querySelectorAll\(\u0027\.bd\-content \[href=\u0022#\u0022\]\u0027\)\n    \.forEach\(link =\u003e \{\n      link\.addEventListener\(\u0027click\u0027, event =\u003e \{\n        event\.preventDefault\(\)\n      \}\)\n    \}\)\n\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Modal\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Modal \u0027Varying modal content\u0027 example in docs and StackBlitz\n  const exampleModal = document\.getElementById\(\u0027exampleModal\u0027\)\n  if \(exampleModal\) \{\n    exampleModal\.addEventListener\(\u0027show\.bs\.modal\u0027, event =\u003e \{\n      \/\/ Button that triggered the modal\n      const button = event\.relatedTarget\n      \/\/ Extract info from data\-bs\-\* attributes\n      const recipient = button\.getAttribute\(\u0027data\-bs\-whatever\u0027\)\n\n      \/\/ Update the modal\u0027s content\.\n      const modalTitle = exampleModal\.querySelector\(\u0027\.modal\-title\u0027\)\n      const modalBodyInput = exampleModal\.querySelector\(\u0027\.modal\-body input\u0027\)\n\n      modalTitle\.textContent = `New message to \$\{recipient\}`\n      modalBodyInput\.value = recipient\n    \}\)\n  \}\n\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ Offcanvas\n  \/\/ \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n  \/\/ \u0027Offcanvas components\u0027 example in docs only\n  const myOffcanvas = document\.querySelectorAll\(\u0027\.bd\-example\-offcanvas \.offcanvas\u0027\)\n  if \(myOffcanvas\) \{\n    myOffcanvas\.forEach\(offcanvas =\u003e \{\n      offcanvas\.addEventListener\(\u0027show\.bs\.offcanvas\u0027, event =\u003e \{\n        event\.preventDefault\(\)\n      \}, false\)\n    \}\)\n  \}\n\}\)\(\)\n' : null
+          const project = {
+            files: {
+              'index.html': markup,
+              'index.js': jsSnippetContent
+            },
+            title: 'Bootstrap Example',
+            description: `Official example from ${window.location.href}`,
+            template: jsSnippet ? 'javascript' : 'html',
+            tags: ['bootstrap']
+          }
+      
+          StackBlitzSDK.openProject(project, { openFile: 'index.html' })
+        }
+      </script>    
+    </body>
+        </html>

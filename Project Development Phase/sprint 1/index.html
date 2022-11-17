@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="Stylesheet" href="index.css">
+</head>
+<body>
+    <nav>
+		<ul class="navigation">
+			<div class="brand"><img src="#" alt="LOGO" /> 
+<!-- Making menu icon clickable to display the navigation menu on smaller screens -->
+				<i onclick="navToggle()" id="nav-icon" class="fa fa-navicon" style="font-size:24px"></i> 
+			</div>
+
+			<div id="toggle" class="nav-container">
+				<a class="left" href="./Login/news.html"><li>GO BACK HOME</li></a>
+			</div>
+		</ul>
+	</nav>
+<!-- NAVIGATION END HERE -->
+
+<section class="form">
+<div class="center">
+	<h1>JOIN WITH OUR <b style="color: #daa800 ;">NEWS APPLICATION</b> TO KNOW ABOUT THE WORLD NEWS</h1>
+	<hr width="20%" style="border: 1px solid #daa800;">
+	<br>
+
+	<form action="">
+		<input class="name-surname" type="text" name="name" placeholder="Name">
+		<input class="name-surname" type="text" name="surname" placeholder="Surname"><br>
+		<input type="text" name="email" placeholder="Email"><br>
+          <div class="checkbox">
+			<h3 style="color: #daa800 ;"><span>SELECT WHAT NEWS YOU NEED FROM THOSE LIST</span></h3>
+            <input type="checkbox" name="Categories" id="p1">
+            <label for="p1">World News</label>
+            <input type="checkbox" name="Categories" id="p2">
+            <label for="p2">Weather News</label><br>
+            <input type="checkbox" name="Categories" id="p3">
+            <label for="p3">Sports News </label>
+            <input type="checkbox" name="Categories" id="p4">
+            <label for="p4">Technology</label><br>
+            <input type="checkbox" name="Categories" id="p5">
+            <label for="p5">Political News</label> 
+			<input type="checkbox" name="Categories" id="p6">
+            <label for="p6">Trending Today</label> <br><br>
+         </div>
+         <br> <input type="password" name="password" placeholder="Password"><br>
+		<input type="password" name="conf_password" placeholder="Confirm Password"><br>
+	
+		<button formaction="./Login/news.html">JOIN</button>
+		<p>Already have an account? <a href="./Login/login.html">Login Here</a></p>
+	</form>
+</div>
+
+</section>
+
+<!-- FOOTER STARTS HERE -->
+
+	<footer>
+		<div class="footer_container">
+			<p class="bottom_text">Company Name� - Copyright � 2018 All Rights Reserved.</p>
+		</div>
+	</footer>
+
+<!-- FOOTER ENDS HERE -->
+</body>
+</html>
