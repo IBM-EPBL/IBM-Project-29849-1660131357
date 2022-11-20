@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="bg-dark">
+    <br>
+    <br>
+    <br>
+    <h3 class = >TODAYS NEWS</h3><br>
+    <div class="media-scroller snaps-inline">
+            {% for source, title, desc, author, img, p_date, url in todays_news %}
+                <div class = "media-element">
+                        <img src="{{ img }}" alt="...">
+                        <div>
+                            <p>{{ source.name }}</p>
+                            <a href="{{ url }}">
+                                <p><b> {{ title }} </b></p>
+                            </a>
+                        </div>
+                </div>
+            {% endfor %}
+    </div>
+    <br>
+
+    <h3 class = >TOP HEADLINES</h3><br>
+    <div class="media-scroller snaps-inline">
+            {% for source, title, desc, author, img, p_date, url in top_headlines %}
+                <div class = "media-element">
+                        <img src="{{ img }}" alt="...">
+                        <div>
+                            <p>{{ source.name }}</p>
+                            <a href="{{ url }}">
+                                <p><b> {{ title }} </b></p>
+                            </a>
+                        </div>
+                </div>
+            {% endfor %}
+    </div>
+    <br>
+
+    <h3 class = >BUSINESS</h3><br>
+    <div class="media-scroller snaps-inline">
+            {% for source, title, desc, author, img, p_date, url in business_articles %}
+                <div class = "media-element">
+                        <img src="{{ img }}" alt="...">
+                        <div>
+                            <p>{{ source.name }}</p>
+                            <a href="{{ url }}">
+                                <p><b> {{ title }} </b></p>
+                            </a>
+                        </div>
+                </div>
+            {% endfor %}
+    </div>
+    <br>
+
+    <h3 class = >TECH NEWS</h3><br>
+    <div class="media-scroller snaps-inline">
+            {% for source, title, desc, author, img, p_date, url in tech_articles %}
+                <div class = "media-element">
+                        <img src="{{ img }}" alt="...">
+                        <div>
+                            <p>{{ source.name }}</p>
+                            <a href="{{ url }}">
+                                <p><b> {{ title }} </b></p>
+                            </a>
+                        </div>
+                </div>
+            {% endfor %}
+    </div>
+    <br>
+
+    <h3 class = >ENTERTAINMENT</h3><br>
+    <div class="media-scroller snaps-inline">
+            {% for source, title, desc, author, img, p_date, url in entertainment_articles %}
+                <div class = "media-element">
+                        <img src="{{ img }}" alt="...">
+                        <div>
+                            <p>{{ source.name }}</p>
+                            <a href="{{ url }}">
+                                <p><b> {{ title }} </b></p>
+                            </a>
+                        </div>
+                </div>
+            {% endfor %}
+    </div>
+    <br>
+
+    <h3 class = >SCIENCE ARTICLES</h3><br>
+    <div class="media-scroller snaps-inline">
+            {% for source, title, desc, author, img, p_date, url in science_articles %}
+                <div class = "media-element">
+                        <img src="{{ img }}" alt="...">
+                        <div>
+                            <p>{{ source.name }}</p>
+                            <a href="{{ url }}">
+                                <p><b> {{ title }} </b></p>
+                            </a>
+                        </div>
+                </div>
+            {% endfor %}
+    </div>
+    <br>
+
+    <h3 class = >SPORTS</h3><br>
+    <div class="media-scroller snaps-inline">
+            {% for source, title, desc, author, img, p_date, url in sport_articles %}
+                <div class = "media-element">
+                        <img src="{{ img }}" alt="...">
+                        <div>
+                            <p>{{ source.name }}</p>
+                            <a href="{{ url }}">
+                                <p><b> {{ title }} </b></p>
+                            </a>
+                        </div>
+                </div>
+            {% endfor %}
+    </div>
+    <br>
+
+    <h3 class = >HEALTH NEWS</h3><br>
+    <div class="media-scroller snaps-inline">
+            {% for source, title, desc, author, img, p_date, url in health_articles %}
+                <div class = "media-element">
+                        <img src="{{ img }}" alt="...">
+                        <div>
+                            <p>{{ source.name }}</p>
+                            <a href="{{ url }}">
+                                <p><b> {{ title }} </b></p>
+                            </a>
+                        </div>
+                </div>
+            {% endfor %}
+    </div>
+    <br>
+</div>
+{% endblock %}

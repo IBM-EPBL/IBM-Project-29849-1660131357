@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #191919;
+}
+
+form{
+    width: 350px;
+    padding: 40px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #191919;
+    text-align: center;
+    box-shadow: 0 20px 18px 0 rgba(0, 0, 0, 1), 0 5px;
+
+}
+
+form h1{
+    color: white;
+    text-transform: uppercase;
+    background: #191919;
+    font-weight: 500;
+}
+
+form input[type = 'email'], form input[type = 'password']{
+    border: none;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-bottom: 1px solid #FFFF00;
+}
+
+form input[type = 'submit']{
+    border: none;
+    background: none;
+    display: block;
+    margin: 45px auto 20px auto;
+    text-align: center;
+    border: 2px solid #FFFF00;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+form input[type = 'submit']:hover{
+    background-color: #FFFF00;
+}
+
+form span{
+    color: grey;
+    font-size: 12px;
+}
+
+form a{
+    font-size: 12px;
+    color: #FFFF00;
+    text-transform: none;
+}
